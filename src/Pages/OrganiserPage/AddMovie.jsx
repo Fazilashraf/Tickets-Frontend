@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import axios from 'axios';
 import { toast, ToastContainer } from 'react-toastify';
+import { addMovieAPI } from '../../Services/allAPI';
 
 function AddMovie() {
   const [movieData, setMovieData] = useState({
@@ -59,7 +59,7 @@ function AddMovie() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post("http://localhost:3000/api/addMovie", movieData);
+      await addMovieAPI(movieData);
       toast.success("🎬 Movie added successfully!");
     } catch (err) {
       toast.error("Failed to add movie.");

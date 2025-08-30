@@ -1,8 +1,7 @@
 import React, { useEffect, useState } from 'react';
-import axios from 'axios';
 import { toast, ToastContainer } from 'react-toastify';
 import { useParams } from 'react-router-dom';
-import { editMovieAPI } from '../../Services/allAPI';
+import { editMovieAPI, getAMovieAPI } from '../../Services/allAPI';
 
 function EditMovie() {
   const { id } = useParams(); // movie ID from route
@@ -34,7 +33,7 @@ function EditMovie() {
   useEffect(() => {
     const fetchMovie = async () => {
       try {
-        const res = await axios.get(`http://localhost:3000/api/getAMovie/${id}`);
+         const res = await getAMovieAPI(id);
         const movie = res.data;
 
         setMovieData({

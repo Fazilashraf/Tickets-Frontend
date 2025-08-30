@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
-import axios from 'axios';
 import { useParams } from 'react-router-dom';
 import { toast, ToastContainer } from 'react-toastify';
+import { editSportAPI, getASportAPI } from '../../Services/allAPI';
 
 function EditSport() {
   const { id } = useParams();
@@ -37,7 +37,7 @@ function EditSport() {
   useEffect(() => {
     const fetchSport = async () => {
       try {
-        const res = await axios.get(`http://localhost:3000/api/getASport/${id}`);
+        const res = await getASportAPI(id);
         setSportData(res.data);
       } catch (err) {
         toast.error("Failed to fetch sport details");
@@ -54,7 +54,7 @@ function EditSport() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.put(`http://localhost:3000/api/editSport/${id}`, sportData);
+      await editSportAPI(id, sportData);
       toast.success("🏆 Sport updated successfully!");
     } catch (err) {
       toast.error("Failed to update sport.");

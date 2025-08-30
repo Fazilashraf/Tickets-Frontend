@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import axios from 'axios';
 import { toast, ToastContainer } from 'react-toastify';
+import { addSportAPI } from '../../Services/allAPI';
 
 function AddSport() {
   const [sportData, setSportData] = useState({
@@ -38,7 +38,7 @@ function AddSport() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post("http://localhost:3000/api/addSport", sportData);
+      await addSportAPI(sportData);
       toast.success("🏆 Sport added successfully!");
       setSportData({
         name: '',

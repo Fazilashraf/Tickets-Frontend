@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
-import axios from 'axios';
 import { useParams } from 'react-router-dom';
 import { toast, ToastContainer } from 'react-toastify';
+import { editEventAPI, getAEventAPI } from '../../Services/allAPI';
 
 function EditEvent() {
   const { id } = useParams();
@@ -38,7 +38,7 @@ function EditEvent() {
   useEffect(() => {
     const fetchEvent = async () => {
       try {
-        const res = await axios.get(`http://localhost:3000/api/getAEvent/${id}`);
+        const res = await getAEventAPI()
         const evt = res.data;
         setEventData({
           ...evt,
@@ -68,7 +68,7 @@ function EditEvent() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.put(`http://localhost:3000/api/editEvent/${id}`, eventData);
+      await editEventAPI(id, eventData);
       toast.success("🎉 Event updated successfully!");
     } catch (err) {
       toast.error("Failed to update event.");

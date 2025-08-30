@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import axios from 'axios';
 import { toast, ToastContainer } from 'react-toastify';
+import { addEventAPI } from '../../Services/allAPI';
 
 function AddEvent() {
   const [eventData, setEventData] = useState({
@@ -48,7 +48,7 @@ function AddEvent() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post('http://localhost:3000/api/addEvent', eventData);
+       await addEventAPI(eventData);
       toast.success('🎉 Event added successfully!');
       setEventData({
         name: '',
