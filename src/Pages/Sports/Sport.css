@@ -1,0 +1,400 @@
+/* Sport.css - Mobile Responsive Styles */
+
+/* Hero Banner Section */
+.hero-banner {
+  overflow: hidden;
+}
+
+.hero-image {
+  height: 300px;
+  object-fit: cover;
+  filter: brightness(50%);
+}
+
+.hero-overlay {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  z-index: 2;
+}
+
+.hero-title {
+  font-size: 3.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.hero-subtitle {
+  font-size: 1.25rem;
+  margin-bottom: 0;
+}
+
+.text-accent {
+  color: rgb(106, 219, 181) !important;
+}
+
+/* Categories Sidebar */
+.sidebar-wrapper {
+  background: transparent;
+}
+
+.categories-card {
+  background-color: rgb(16, 44, 112);
+  border-radius: 10px;
+  padding: 1.5rem;
+  color: white;
+}
+
+.categories-title {
+  color: white;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.category-btn {
+  background-color: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: white;
+  transition: all 0.3s ease;
+  padding: 0.75rem 1rem;
+}
+
+.category-btn:hover {
+  background-color: rgba(106, 219, 181, 0.2);
+  border-color: rgb(106, 219, 181);
+  color: white;
+}
+
+.category-btn.active {
+  background-color: rgb(106, 219, 181);
+  border-color: rgb(106, 219, 181);
+  color: rgb(16, 44, 112);
+  font-weight: 600;
+}
+
+.sidebar-image img {
+  height: 300px;
+  object-fit: cover;
+}
+
+/* Search Section */
+.search-section {
+  margin-top: 1rem;
+}
+
+.section-title {
+  color: cyan;
+  font-weight: 600;
+}
+
+.search-input {
+  border: 2px solid rgba(0, 255, 255, 0.3);
+  border-radius: 8px;
+  padding: 0.75rem 1rem;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: white;
+  transition: border-color 0.3s ease;
+}
+
+.search-input:focus {
+  border-color: cyan;
+  box-shadow: 0 0 0 0.2rem rgba(0, 255, 255, 0.25);
+  background-color: rgba(255, 255, 255, 0.15);
+  color: white;
+}
+
+.search-input::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+/* Sport Cards */
+.sport-card {
+  background-color: rgb(16, 44, 112);
+  border-radius: 15px;
+  padding: 1.5rem;
+  height: 440px;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.sport-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+.sport-date {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.date-badge {
+  background-color: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  font-size: 0.9rem;
+}
+
+.sport-image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+  margin-bottom: 1rem;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.sport-image {
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.sport-image:hover {
+  transform: scale(1.05);
+}
+
+.sport-details {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.sport-name {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.sport-venue {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  opacity: 0.9;
+}
+
+.sport-footer {
+  margin-top: auto;
+}
+
+.sport-price {
+  font-size: 1.75rem;
+  font-weight: bold;
+  color: rgb(106, 219, 181);
+}
+
+.sport-votes {
+  font-size: 1.1rem;
+  opacity: 0.9;
+}
+
+/* Pagination */
+.pagination-wrapper {
+  margin-top: 2rem;
+  padding: 1rem 0;
+}
+
+.pagination-controls {
+  max-width: 100%;
+  overflow-x: auto;
+  padding: 0.5rem;
+}
+
+.pagination-btn {
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: white;
+  padding: 0.5rem 1rem;
+  min-width: 45px;
+  transition: all 0.3s ease;
+}
+
+.pagination-btn:hover:not(:disabled) {
+  background-color: rgba(106, 219, 181, 0.2);
+  border-color: rgb(106, 219, 181);
+  color: white;
+}
+
+.pagination-btn.active {
+  background-color: rgb(106, 219, 181);
+  border-color: rgb(106, 219, 181);
+  color: rgb(16, 44, 112);
+  font-weight: 600;
+}
+
+.pagination-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Mobile Responsive Breakpoints */
+
+/* Extra small devices (phones, 576px and down) */
+@media (max-width: 575.98px) {
+  .hero-title {
+    font-size: 2rem;
+  }
+  
+  .hero-subtitle {
+    font-size: 1rem;
+  }
+  
+  .hero-image {
+    height: 250px;
+  }
+  
+  .sport-card {
+    height: auto;
+    min-height: 380px;
+  }
+  
+  .sport-image {
+    width: 150px;
+    height: 150px;
+  }
+  
+  .sport-image-container {
+    height: 170px;
+  }
+  
+  .sport-name {
+    font-size: 1.25rem;
+  }
+  
+  .sport-price {
+    font-size: 1.5rem;
+  }
+  
+  .categories-card {
+    margin-bottom: 1rem;
+    width: 90%;
+  }
+  
+  .pagination-controls {
+    justify-content: flex-start !important;
+  }
+  
+  .pagination-btn {
+    font-size: 0.9rem;
+    padding: 0.4rem 0.8rem;
+    min-width: 40px;
+  }
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .hero-title {
+    font-size: 2.5rem;
+  }
+  
+  .hero-subtitle {
+    font-size: 1.1rem;
+  }
+  
+  .sport-card {
+    height: 420px;
+  }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .hero-title {
+    font-size: 3rem;
+  }
+  
+  .search-section .row {
+    align-items: center;
+  }
+  
+  .sport-card {
+    height: 430px;
+  }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+  .hero-title {
+    font-size: 3.5rem;
+  }
+  
+  .sidebar-wrapper {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+  
+  .main-content {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+  .sport-card {
+    height: 440px;
+  }
+  
+  .container-fluid {
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+}
+
+/* Utility Classes */
+.text-light {
+  color: #f8f9fa !important;
+}
+
+.bg-primary-custom {
+  background-color: rgb(16, 44, 112) !important;
+}
+
+/* Smooth scrolling for all elements */
+* {
+  scroll-behavior: smooth;
+}
+
+/* Custom scrollbar for pagination on mobile */
+.pagination-controls::-webkit-scrollbar {
+  height: 4px;
+}
+
+.pagination-controls::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 2px;
+}
+
+.pagination-controls::-webkit-scrollbar-thumb {
+  background: rgba(106, 219, 181, 0.5);
+  border-radius: 2px;
+}
+
+.pagination-controls::-webkit-scrollbar-thumb:hover {
+  background: rgba(106, 219, 181, 0.7);
+}
+
+/* Loading states and transitions */
+.sport-card, .category-btn, .pagination-btn, .search-input {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Focus states for accessibility */
+.category-btn:focus,
+.pagination-btn:focus,
+.search-input:focus {
+  outline: 2px solid rgb(106, 219, 181);
+  outline-offset: 2px;
+}
+
+/* Hover effects for touch devices */
+@media (hover: hover) {
+  .sport-card:hover {
+    transform: translateY(-8px);
+  }
+}

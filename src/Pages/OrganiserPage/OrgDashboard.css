@@ -1,0 +1,7 @@
+.navvv {
+
+    border-radius: 13px;
+    background: linear-gradient(145deg, rgb(16, 44, 112), rgb(5, 23, 66));
+    box-shadow: 15px 15px 40px #969696,
+        -15px -15px 40px #ffffff;
+}

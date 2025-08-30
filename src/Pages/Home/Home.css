@@ -1,0 +1,57 @@
+/* Banner */
+#BImg {
+  filter: brightness(50%);
+  width: 100%;
+  height: 600px;
+  object-fit: cover;
+}
+
+.banner-text h1 {
+  font-size: 2.5rem;
+}
+@media (min-width: 768px) {
+  .banner-text h1 {
+    font-size: 3.5rem;
+  }
+}
+
+/* Section container */
+.section-container {
+  background-color: rgb(5, 23, 66);
+  padding: 3rem 2rem;
+}
+
+/* Cards */
+.event-card {
+  background-color: #0b1f47b6 !important;
+  color: white;
+  border-radius: 20px;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+.event-card:hover {
+  transform: translateY(-5px);
+}
+
+.event-image-container {
+  overflow: hidden;
+  border-radius: 12px;
+}
+.event-image {
+  width: 100%;
+  height: 400px; /* fixed height */
+  object-fit: cover; /* keeps aspect ratio & crops overflow */
+  transition: transform 0.3s ease;
+}
+
+.event-image-container:hover .event-image {
+  transform: scale(1.1);
+}
+
+#btnVM {
+  color: cyan;
+  transition: color 0.3s ease;
+}
+#btnVM:hover {
+  color: antiquewhite;
+}

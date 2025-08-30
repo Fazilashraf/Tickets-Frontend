@@ -1,0 +1,544 @@
+/* SeatPlan.css - Mobile Responsive Styles */
+
+/* Base Styles */
+.seatplan-container {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #0f1419 0%, #1a2332 100%);
+}
+
+/* Hero Banner Section */
+.hero-banner {
+  height: 350px;
+  overflow: hidden;
+  position: relative;
+}
+
+.hero-image {
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(40%);
+}
+
+.hero-overlay {
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.3);
+}
+
+.hero-content {
+  max-width: 100%;
+}
+
+.movie-title {
+  font-size: 3rem;
+  font-weight: 700;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+  margin-bottom: 1rem;
+}
+
+.genre-buttons {
+  max-width: 90%;
+  margin: 0 auto;
+}
+
+.genre-btn,
+.screen-btn {
+  border: 1px solid rgba(255, 255, 255, 0.7) !important;
+  color: white !important;
+  font-size: 0.9rem;
+  padding: 0.5rem 1rem;
+  transition: all 0.3s ease;
+}
+
+.genre-btn:hover,
+.screen-btn:hover {
+  background-color: rgba(255, 255, 255, 0.1) !important;
+  border-color: white !important;
+}
+
+/* Navigation Bar */
+.seatplan-navbar {
+  background-color: rgb(16, 44, 112);
+  color: white;
+  margin-top: 1rem;
+}
+
+.back-btn,
+.theatre-btn {
+  border: 1px solid rgba(255, 255, 255, 0.7) !important;
+  color: white !important;
+  transition: all 0.3s ease;
+  font-size: 0.9rem;
+  padding: 0.5rem 1rem;
+}
+
+.back-btn:hover,
+.theatre-btn:hover {
+  background-color: rgba(255, 255, 255, 0.1) !important;
+  border-color: white !important;
+  color: white !important;
+}
+
+.date-display {
+  color: white;
+  font-weight: 500;
+}
+
+/* Timings Section */
+.timings-wrapper {
+  padding: 2rem 1rem;
+  display: flex;
+  justify-content: center;
+}
+
+.timings-card {
+  background: rgba(243, 2, 2, 0.54);
+  border-radius: 20px;
+  padding: 1.5rem;
+  color: white;
+  width: 100%;
+  max-width: 350px;
+  backdrop-filter: blur(10px);
+}
+
+.timings-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.timings-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.timing-item {
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.timing-item:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: translateY(-2px);
+}
+
+.timing-item.active {
+  background: #dc3545;
+  border-color: #dc3545;
+  font-weight: 600;
+  box-shadow: 0 4px 12px rgba(220, 53, 69, 0.3);
+}
+
+.loading-text {
+  text-align: center;
+  opacity: 0.7;
+}
+
+/* Seat Selection Section */
+.seat-selection-wrapper {
+  padding: 2rem 1rem;
+}
+
+.seat-container {
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  color: #fff;
+}
+
+.seat-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  color: white;
+}
+
+.screen {
+  background: #cc0d39;
+  padding: 15px;
+  margin-bottom: 30px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 1.1rem;
+  box-shadow: 0 4px 12px rgba(204, 13, 57, 0.3);
+}
+
+.seats-grid {
+  background: rgba(0, 0, 0, 0.3);
+  padding: 1.5rem;
+  border-radius: 15px;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.seat-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10px;
+  gap: 3px;
+}
+
+.seat-label {
+  width: 25px;
+  text-align: center;
+  margin-right: 10px;
+  font-weight: 600;
+  color: #ccc;
+}
+
+.seat-btn {
+  width: 35px;
+  height: 35px;
+  margin: 2px;
+  border-radius: 6px;
+  border: 1px solid #666;
+  background-color: #444;
+  color: #fff;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+.seat-btn:hover {
+  background-color: #666;
+  transform: scale(1.1);
+  box-shadow: 0 2px 8px rgba(255, 255, 255, 0.2);
+}
+
+.seat-btn.selected {
+  background-color: #cc0d39;
+  border-color: #cc0d39;
+  color: white;
+  transform: scale(1.1);
+  box-shadow: 0 4px 12px rgba(204, 13, 57, 0.4);
+}
+
+.selected-seats-info {
+  background: rgba(0, 0, 0, 0.4);
+  padding: 1rem;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.selected-seats-title {
+  font-size: 1.1rem;
+  margin-bottom: 0;
+  color: #ccc;
+}
+
+.selected-seats-list {
+  color: #cc0d39;
+  font-weight: 600;
+}
+
+/* Checkout Section */
+.checkout-section {
+  background: rgba(0, 0, 0, 0.2);
+  margin-top: 2rem;
+}
+
+.checkout-btn {
+  background-color: #dc3545 !important;
+  border: none !important;
+  color: white !important;
+  padding: 0.75rem 2rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(220, 53, 69, 0.3);
+}
+
+.checkout-btn:hover {
+  background-color: #c82333 !important;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(220, 53, 69, 0.4);
+}
+
+.checkout-btn:active {
+  transform: translateY(0);
+}
+
+/* Custom Table Styles */
+.custom-table td, 
+.custom-table th {
+  border: none !important;
+}
+
+/* Mobile Responsive Breakpoints */
+
+/* Extra Small Devices (phones, 576px and down) */
+@media (max-width: 575.98px) {
+  .hero-banner {
+    height: 250px;
+  }
+  
+  .movie-title {
+    font-size: 1.8rem;
+  }
+  
+  .genre-btn,
+  .screen-btn {
+    font-size: 0.8rem;
+    padding: 0.4rem 0.8rem;
+  }
+  
+  .seatplan-navbar .row > div {
+    text-align: center !important;
+  }
+  
+  .date-display {
+    font-size: 1rem;
+  }
+  
+  .back-btn,
+  .theatre-btn {
+    font-size: 0.8rem;
+    padding: 0.4rem 0.8rem;
+  }
+  
+  .timings-wrapper {
+    padding: 1rem 0.5rem;
+  }
+  
+  .timings-card {
+    max-width: 100%;
+    margin: 0 0.5rem;
+  }
+  
+  .seat-selection-wrapper {
+    padding: 1rem 0.5rem;
+  }
+  
+  .seat-title {
+    font-size: 1.25rem;
+  }
+  
+  .screen {
+    font-size: 0.9rem;
+    padding: 10px;
+  }
+  
+  .seats-grid {
+    padding: 1rem;
+  }
+  
+  .seat-btn {
+    width: 28px;
+    height: 28px;
+    font-size: 0.75rem;
+    margin: 1px;
+  }
+  
+  .seat-label {
+    width: 20px;
+    margin-right: 5px;
+    font-size: 0.9rem;
+  }
+  
+  .seat-row {
+    margin-bottom: 6px;
+    gap: 1px;
+  }
+  
+  .selected-seats-title {
+    font-size: 1rem;
+  }
+  
+  .checkout-btn {
+    padding: 0.6rem 1.5rem;
+    font-size: 1rem;
+  }
+}
+
+/* Small Devices (landscape phones, 576px to 767px) */
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .hero-banner {
+    height: 280px;
+  }
+  
+  .movie-title {
+    font-size: 2.2rem;
+  }
+  
+  .seat-btn {
+    width: 30px;
+    height: 30px;
+  }
+  
+  .seat-label {
+    width: 22px;
+    margin-right: 8px;
+  }
+  
+  .seats-grid {
+    padding: 1.25rem;
+  }
+}
+
+/* Medium Devices (tablets, 768px to 991px) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .hero-banner {
+    height: 320px;
+  }
+  
+  .movie-title {
+    font-size: 2.5rem;
+  }
+  
+  .timings-wrapper {
+    padding: 1.5rem 1rem;
+  }
+  
+  .seat-selection-wrapper {
+    padding: 1.5rem 1rem;
+  }
+  
+  .seat-btn {
+    width: 32px;
+    height: 32px;
+  }
+}
+
+/* Large Devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+  .hero-banner {
+    height: 350px;
+  }
+  
+  .movie-title {
+    font-size: 3rem;
+  }
+  
+  .container-fluid {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+}
+
+/* Extra Large Devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+  .timings-wrapper {
+    padding: 2rem 2rem;
+  }
+  
+  .seat-selection-wrapper {
+    padding: 2rem 2rem;
+  }
+}
+
+/* Landscape Orientation for Mobile */
+@media (max-width: 767px) and (orientation: landscape) {
+  .hero-banner {
+    height: 200px;
+  }
+  
+  .movie-title {
+    font-size: 1.5rem;
+  }
+  
+  .timings-wrapper,
+  .seat-selection-wrapper {
+    padding: 1rem;
+  }
+  
+  .seats-grid {
+    padding: 0.75rem;
+  }
+}
+
+/* Touch Device Optimizations */
+@media (hover: none) and (pointer: coarse) {
+  .seat-btn {
+    min-height: 44px;
+    min-width: 44px;
+  }
+  
+  .timing-item {
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+  }
+  
+  .back-btn,
+  .theatre-btn,
+  .checkout-btn {
+    min-height: 44px;
+  }
+}
+
+/* Animation for seat selection */
+@keyframes seatPulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.15);
+  }
+  100% {
+    transform: scale(1.1);
+  }
+}
+
+.seat-btn.selected {
+  animation: seatPulse 0.3s ease-in-out;
+}
+
+/* Smooth transitions */
+* {
+  scroll-behavior: smooth;
+}
+
+/* Focus states for accessibility */
+.seat-btn:focus,
+.timing-item:focus,
+.back-btn:focus,
+.theatre-btn:focus,
+.checkout-btn:focus {
+  outline: 2px solid #cc0d39;
+  outline-offset: 2px;
+}
+
+/* Loading animation */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.timings-card,
+.seat-container {
+  animation: fadeInUp 0.6s ease-out;
+}
+
+/* Custom scrollbar */
+.timings-list::-webkit-scrollbar {
+  width: 6px;
+}
+
+.timings-list::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 3px;
+}
+
+.timings-list::-webkit-scrollbar-thumb {
+  background: rgba(204, 13, 57, 0.7);
+  border-radius: 3px;
+}
+
+.timings-list::-webkit-scrollbar-thumb:hover {
+  background: rgba(204, 13, 57, 0.9);
+}

@@ -1,0 +1,523 @@
+/* Original styles */
+.body {
+  background-color: rgb(5, 23, 66);
+}
+
+.trailer-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.85);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+  padding: 1rem;
+}
+
+.trailer-content {
+  position: relative;
+  width: 80%;
+  max-width: 800px;
+  background: #000;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.close-button {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  color: white;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+/* From Uiverse.io by Praashoo7 */
+/* Hide the default checkbox */
+.like-container input {
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.like-container {
+  display: block;
+  position: relative;
+  cursor: pointer;
+  font-size: 20px;
+  user-select: none;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+  position: relative;
+  top: 0;
+  left: 0;
+  height: 3em;
+  width: 3em;
+  background-color: #171717;
+  border-radius: 10px;
+  transition: .2s ease-in-out;
+  z-index: 2;
+}
+
+.like {
+  position: relative;
+  font-size: 0.8em;
+  top: -3.5em;
+  text-align: center;
+  z-index: -1;
+  margin: 0;
+}
+
+.icon {
+  margin: 0.2em;
+  fill: white;
+  transition: .4s ease-in-out;
+}
+
+.checkmark:hover {
+  background-color: white;
+}
+
+.checkmark:hover .icon {
+  fill: black;
+  transform: rotate(-8deg);
+  transform-origin: bottom left;
+}
+
+/* When the checkbox is checked, add a blue background */
+.like-container input:checked~.checkmark {
+  background-color: limegreen;
+}
+
+.like-container input:checked~.like {
+  color: white;
+  animation: 0.6s up_3951;
+}
+
+.like-container input:checked~.checkmark .icon {
+  fill: white;
+  transform: none;
+  animation: 0.5s jump_3951;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.like-container input:checked~.checkmark:after {
+  display: block;
+}
+
+@keyframes up_3951 {
+  100% {
+    transform: translateY(-2em);
+  }
+}
+
+@keyframes jump_3951 {
+  50% {
+    transform-origin: center;
+    transform: translateY(-0.5em) rotate(-8deg);
+  }
+
+  100% {
+    transform-origin: center;
+    transform: translateY(0em);
+  }
+}
+
+/* New responsive styles */
+.movie-page {
+  background-color: rgb(5, 23, 66);
+  min-height: 100vh;
+}
+
+/* Banner Responsive Styles */
+.bannerr-container {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.bannerr-image {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+
+.bannerr-content {
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  width: 90%;
+  max-width: 800px;
+}
+
+.bannerr-title {
+  font-size: 55px;
+  color: white;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.bannerr-text {
+  font-size: 20px;
+  color: white;
+  margin: 0;
+}
+
+/* Mobile Filter Toggle */
+.mobile-filter-toggle {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* Sidebar Styles */
+.sidebar {
+  background-color: rgb(5, 23, 66);
+}
+
+.filter-grid {
+  padding: 0;
+  margin: 0;
+}
+
+.filter-btn.active {
+  background-color: limegreen !important;
+  border-color: limegreen !important;
+}
+
+/* Search Styles */
+.text-search-title {
+  white-space: nowrap;
+  margin-right: 1rem;
+}
+
+.search-input {
+  flex: 1;
+  margin-left: 1rem;
+}
+
+.search{
+  width: 95%;
+}
+
+/* Movie Card Styles */
+.movie-card {
+  margin-bottom: 1.5rem !important;
+  width: 95%;
+}
+
+.movie-image-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 1rem;
+}
+
+.movie-image {
+  width: 200px;
+  height: auto;
+  border-radius: 8px;
+}
+
+.movie-details {
+  color: white;
+}
+
+.movie-title {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.movie-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.movie-stats p {
+  font-size: 1.1rem;
+}
+
+.movie-actions {
+  margin-top: 1rem;
+}
+
+.ticket-link {
+  text-decoration: none;
+  color: cyan !important;
+}
+
+.ticket-link:hover {
+  text-decoration: underline;
+}
+
+.trailer-btn {
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-weight: 500;
+  min-height: 50px;
+}
+
+/* Pagination */
+.pagination-container .btn.active {
+  background-color: white !important;
+  color: black !important;
+}
+
+/* Responsive Media Queries */
+
+/* Extra Small devices (phones, 576px and down) */
+@media (max-width: 575.98px) {
+
+  .bannerr-content{
+    top: 45%;
+  }
+
+  .bannerr-title {
+    font-size: 28px;
+  }
+  
+  .bannerr-text {
+    font-size: 14px;
+  }
+  
+  .bannerr-image {
+    height: 200px;
+  }
+  
+  .movie-title {
+    font-size: 1.5rem;
+  }
+  
+  .like-container {
+    font-size: 16px;
+  }
+  
+  .checkmark {
+    height: 2.5em;
+    width: 2.5em;
+  }
+  
+  .trailer-content {
+    padding: 10px;
+    width: 95%;
+  }
+  
+  .trailer-content iframe {
+    height: 200px !important;
+  }
+  
+  .filter-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.5rem;
+  }
+  
+  .text-search-title {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .search-input {
+    margin-left: 0;
+    margin-top: 0.5rem;
+  }
+  
+  .movie-image {
+    width: 150px;
+  }
+  
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .bannerr-title {
+    font-size: 35px;
+  }
+  
+  .bannerr-text {
+    font-size: 16px;
+  }
+  
+  .bannerr-image {
+    height: 220px;
+  }
+  
+  .movie-title {
+    font-size: 1.75rem;
+  }
+  
+  .trailer-content iframe {
+    height: 250px !important;
+  }
+  
+  .filter-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.5rem;
+  }
+  
+  .movie-image {
+    width: 180px;
+  }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .bannerr-title {
+    font-size: 45px;
+  }
+  
+  .bannerr-text {
+    font-size: 18px;
+  }
+  
+  .bannerr-image {
+    height: 250px;
+  }
+  
+  .movie-image-container {
+    padding: 2rem 1rem;
+  }
+  
+  .movie-image {
+    width: 200px;
+  }
+  
+  .trailer-content iframe {
+    height: 300px !important;
+  }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+  .bannerr-title {
+    font-size: 55px;
+  }
+  
+  .bannerr-text {
+    font-size: 20px;
+  }
+  
+  .bannerr-image {
+    height: 300px;
+  }
+  
+  .filter-grid {
+    display: block;
+  }
+  
+  .search-input {
+    width: 75%;
+  }
+  
+  .movie-image-container {
+    padding: 2rem;
+  }
+  
+  .trailer-content iframe {
+    height: 400px !important;
+  }
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+  .bannerr-content {
+    max-width: 1000px;
+  }
+  
+  .main-content {
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+}
+
+/* Additional responsive utilities */
+.d-flex-mobile {
+  display: flex;
+  flex-direction: column;
+}
+
+@media (min-width: 576px) {
+  .d-flex-mobile {
+    flex-direction: row;
+  }
+}
+
+/* Custom responsive spacing */
+@media (max-width: 767.98px) {
+  .movie-actions {
+    gap: 1rem;
+  }
+  
+  .movie-actions > div {
+    width: 100%;
+    justify-content: flex-start;
+  }
+  
+  .trailer-btn {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+/* Ensure proper spacing on all devices */
+.movie-stats {
+  gap: 1rem;
+}
+
+.movie-stats > div {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* Fix for Bootstrap responsive utilities */
+@media (max-width: 991.98px) {
+  .d-lg-none {
+    display: block !important;
+  }
+  
+  .d-none.d-lg-block {
+    display: none !important;
+  }
+  
+  .sidebar.d-block {
+    display: block !important;
+  }
+}
+
+/* Accessibility improvements */
+@media (prefers-reduced-motion: reduce) {
+  .like-container input:checked~.like {
+    animation: none;
+  }
+  
+  .like-container input:checked~.checkmark .icon {
+    animation: none;
+  }
+  
+  .checkmark {
+    transition: none;
+  }
+  
+  .icon {
+    transition: none;
+  }
+}

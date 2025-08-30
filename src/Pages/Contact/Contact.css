@@ -1,0 +1,76 @@
+* {
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+#CFS {
+  background-color: rgb(5, 23, 66);
+  border: 3px groove rgb(15, 220, 172);
+}
+
+.contact-twice{
+  background-color: rgb(5, 23, 66);
+  color: rgb(15, 220, 172);
+  position: absolute;
+  top: 110%;
+  width: 40%;
+  height: 30%;
+}
+
+#btnCFH:hover,
+#btnAUS:hover {
+  box-shadow: 2px 3px 3px rgb(15, 220, 172);
+}
+
+.stats-container {
+  display: flex;
+  flex-wrap: wrap; /* ✅ stack on mobile */
+  padding: 50px 20px;
+  justify-content: center;
+  gap: 20px;
+}
+
+.stat-card {
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.2s ease-in-out;
+  flex: 1 1 200px; /* ✅ responsive card size */
+  max-width: 300px;
+}
+
+.stat-card span {
+  font-size: 24px;
+  font-weight: bold;
+  color: #fff;
+}
+
+.stat-card p {
+  color: rgb(15, 220, 172);
+  margin-top: 5px;
+}
+
+.stat-card.hovered {
+  transform: scale(1.05);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* ✅ Mobile adjustments */
+@media (max-width: 768px) {
+  .row.p-5 {
+    padding: 20px !important;
+  }
+  .form-control {
+    width: 100% !important;
+  }
+  textarea.form-control {
+    height: 120px;
+  }
+
+  .contact-twice{
+    width: 60%;
+    height: 25%;
+    top: 115%;
+  }
+}
