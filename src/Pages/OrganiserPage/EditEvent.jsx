@@ -38,7 +38,7 @@ function EditEvent() {
   useEffect(() => {
     const fetchEvent = async () => {
       try {
-        const res = await getAEventAPI()
+        const res = await getAEventAPI(id)
         const evt = res.data;
         setEventData({
           ...evt,
